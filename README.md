@@ -76,9 +76,43 @@ firebase init
   - What do you want to use as your public directory? dist
 
 ```command
-npm i firebase
+npm i firebase@7.14.2
+```
+
+- Realtime 데이터 베이스 사용
+```Vue
+<script>
+export default {
+  methods: {
+    save () { // 저장
+      this.$firebase.database().ref().child('abcd').set({
+        title: 'abcd', text: 'tttttt'
+      })
+    },
+    read () { // 읽기 (리스닝)
+      this.$firebase.database().ref().child('abcd').on('value', (sn) => {
+        console.log(sn)
+        console.log(sn.val())
+      })
+    },
+    async readOne () { // 읽기 (1회성)
+      const sn = await this.$firebase.database().ref().child('abcd').once('value')
+      console.log(sn.val())
+    }
+  }
+}
+</script>
+```
+
+- database.rules를 바꾸고 싶을 때, json 파일을 수정하고 아래와 같이 배포한다.
+```command
+firebase deploy --only database
+```
+
+```command
+npm i vuetify-toast-snackbar
 ```
 
 ### 듣던 강의
-[Vue와 Firebase로 나만의 사이트 만들기 11](https://www.youtube.com/watch?v=wzYuEzyAcco&list=PLjpTKic1SLZsWckh_DZ6tYH17MM6hBAc7&index=17)
+[Vue와 Firebase로 나만의 사이트 만들기 20](https://www.youtube.com/watch?v=vNSDX2oj2es&list=PLjpTKic1SLZsWckh_DZ6tYH17MM6hBAc7&index=21)
 [Vuetify | IE11 & Safari 9 support](https://v2.vuetifyjs.com/ko/getting-started/browser-support)
