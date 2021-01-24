@@ -56,6 +56,29 @@ vue add vuetify
     
 ```
 
+### 파이어베이스 설정
+
+- Realtime Database
+  - 기본 GCP 리소스 위치: asia-northeast3 (서울)
+  - 지원 이메일: heroyooi1018@gmail.com
+  - 인증 사용 설정: 이메일/비밀번호, Google
+
+```command
+npm i -g firebase-tools
+firebase login
+```
+```command
+firebase init
+```
+- 파이어 베이스 초기화
+  - Database, Firestore, Functions, Hosting, Storage, Emulators
+  - Use an existing project
+  - What do you want to use as your public directory? dist
+
+```command
+npm i firebase
+```
+
 ### 듣던 강의
-[Vue와 Firebase로 나만의 사이트 만들기 11](https://www.youtube.com/watch?v=wzYuEzyAcco&list=PLjpTKic1SLZsWckh_DZ6tYH17MM6hBAc7&index=12)
+[Vue와 Firebase로 나만의 사이트 만들기 11](https://www.youtube.com/watch?v=wzYuEzyAcco&list=PLjpTKic1SLZsWckh_DZ6tYH17MM6hBAc7&index=17)
 [Vuetify | IE11 & Safari 9 support](https://v2.vuetifyjs.com/ko/getting-started/browser-support)
