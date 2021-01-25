@@ -114,5 +114,5 @@ npm i vuetify-toast-snackbar
 ```
 
 ### 듣던 강의
-[Vue와 Firebase로 나만의 사이트 만들기 20](https://www.youtube.com/watch?v=vNSDX2oj2es&list=PLjpTKic1SLZsWckh_DZ6tYH17MM6hBAc7&index=21)
+[Vue와 Firebase로 나만의 사이트 만들기 22](https://www.youtube.com/watch?v=2tctskKGfvU&list=PLjpTKic1SLZsWckh_DZ6tYH17MM6hBAc7&index=23)
 [Vuetify | IE11 & Safari 9 support](https://v2.vuetifyjs.com/ko/getting-started/browser-support)
